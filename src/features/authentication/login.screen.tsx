@@ -6,7 +6,7 @@ import {Box} from '@components/layouts/Box';
 import {Text} from '@components/layouts/Text';
 import {Button} from '@components/layouts/Button';
 import {useTheme} from 'styled-components';
-import {SIGN_UP_SCREEN} from '@constants/screens';
+import {PLAN_STACK, SIGN_UP_SCREEN} from '@constants/screens';
 import {useAppNavigation} from '@hooks/useAppNavigation';
 import {GradientButton} from '@components/GradientButton';
 import CustomInput from '@components/Input';
@@ -63,7 +63,13 @@ const Login = () => {
           </Text>
         </Scroll>
 
-        <GradientButton mb={20} label="Login" onPress={() => {}} />
+        <GradientButton
+          mb={20}
+          label="Login"
+          onPress={() => {
+            navigation.navigate(PLAN_STACK);
+          }}
+        />
       </Container>
     </SafeArea>
   );

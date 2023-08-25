@@ -17,7 +17,7 @@ export interface TextProps
     TextStyleProps {}
 
 export const Text = styled.Text<TextProps>`
-  font-family: 'Mitr-Regular';
+  font-family: ${({theme}) => theme.fontFamily.mo400};
   color: ${({theme}) => theme.colors.raisin_black};
   ${typography}
   ${color}

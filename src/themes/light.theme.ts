@@ -25,6 +25,7 @@ declare module 'styled-components' {
       mo300: string;
       mo400: string;
       mo500: string;
+      mo600: string;
       mo700: string;
     };
     sizes: object;
@@ -51,12 +52,13 @@ const theme: DefaultTheme = {
   fontFamily: {
     mi200: 'Mitr-ExtraLight',
     mi300: 'Mitr-Light',
-    mi400: 'Mitr-Medium',
-    mi500: 'Mitr-Regular',
+    mi400: 'Mitr-Regular',
+    mi500: 'Mitr-Medium',
 
     mo300: 'Montserrat-Light',
-    mo400: 'Montserrat-Medium',
-    mo500: 'Montserrat-Regular',
+    mo400: 'Montserrat-Regular',
+    mo500: 'Montserrat-Medium',
+    mo600: 'Montserrat-Medium',
     mo700: 'Montserrat-Bold',
   },
   fontSizes: {
