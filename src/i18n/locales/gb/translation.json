@@ -1,7 +1,41 @@
 {
-  "btn_login": "Login",
-  "btn_join_now": "Join Now",
+  "login": "Login",
+  "join_now": "Join Now",
 
-  "link_privacy_policy": "Privacy Policy",
-  "link_terms_n_condition": "Terms & Condition"
+  "privacy_policy": "Privacy Policy",
+  "terms_n_condition": "Terms & Condition",
+
+  "don_t_have_an_account": "Don't have an account?",
+  "create_new": "Create New",
+  "signup_label": "Create New Account",
+  "create_account": "Create Account",
+  "already_have_an_account": "Already have an account?",
+  "email": "Email",
+  "password": "Password",
+  "create_password": "Create Password",
+  "email_placeholder": "Enter Email",
+  "password_placeholder": "Enter Password",
+  "confirm_password": "Re-enter Password",
+  "confirm_password_placeholder": "Re-enter Password",
+  "forgot_password": "Forgot Password ?",
+
+  "pricing_plan": "Pricing Plan",
+  "membership_pricing_plans": "Membership pricing plans",
+  "basic_plan": "Basic Plan",
+  "annual_plan": "Annual Plan",
+  "most_popular": "Most Popular",
+  "buy_now": "Buy Now",
+
+  "question": "Question",
+
+  "question_1_label": "What is your fitness Goal?",
+  "question_2_label": "How fit are you right now?",
+  "question_3_label": "What is your height and weight?",
+  "question_4_label": "What is your gender and birthday?",
+  "question_5_label": "Do you have dietary preference?",
+  "question_6_label": "Do you have allergies?",
+  "question_7_label": "Facing any health issues?",
+  "success_label": "THANKS!",
+
+  "continue": "Continue"
 }

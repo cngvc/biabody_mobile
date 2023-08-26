@@ -39,25 +39,25 @@ export const IntroScreen = () => {
           <OutlineButton
             flex={1}
             onPress={() => navigation.navigate(LOGIN_SCREEN)}
-            label={t('btn_login')}
+            label={t('login')}
           />
           <Box width={16} />
           <GradientButton
             flex={1}
             onPress={() => navigation.navigate(SIGN_UP_SCREEN)}
-            label={t('btn_join_now')}
+            label={t('join_now')}
           />
         </Box>
         <Box flexDirection="row" justifyContent="center" mb={20}>
           <Button>
             <Text fontSize={10} color={colors}>
-              {t('link_privacy_policy')}
+              {t('privacy_policy')}
             </Text>
           </Button>
           <Box width={16} />
           <Button>
             <Text fontSize={10} color={colors}>
-              {t('link_terms_n_condition')}
+              {t('terms_n_condition')}
             </Text>
           </Button>
         </Box>

@@ -9,15 +9,17 @@ import {useTheme} from 'styled-components';
 import {PLAN_STACK, SIGN_UP_SCREEN} from '@constants/screens';
 import {useAppNavigation} from '@hooks/useAppNavigation';
 import {GradientButton} from '@components/GradientButton';
-import CustomInput from '@components/Input';
+import CustomInput from '@components/CustomInput';
 import {Images} from '@assets/Images';
 import {GradientText} from '@components/GradientText';
 import {SafeArea} from '@components/layouts/SafeArea';
 import {StatusBar} from 'react-native';
+import {useTranslation} from 'react-i18next';
 
 const Login = () => {
   const navigation = useAppNavigation();
   const {colors, fontFamily} = useTheme();
+  const {t} = useTranslation();
 
   return (
     <SafeArea>
@@ -34,37 +36,44 @@ const Login = () => {
         />
         <Scroll>
           <Text mb={8} color={colors.raisin_black} fontSize={20}>
-            Login
+            {t('login')}
           </Text>
           <Box flexDirection="row" mb={32}>
             <Text
               fontSize={10}
               color={colors.metallic_gray}
               fontFamily={fontFamily.mo400}>
-              Don’t have an account?{' '}
+              {t('don_t_have_an_account')}{' '}
             </Text>
 
             <Button onPress={() => navigation.navigate(SIGN_UP_SCREEN)}>
               <GradientText fontFamily={fontFamily.mo700} fontSize={10}>
-                Create New
+                {t('create_new')}
               </GradientText>
             </Button>
           </Box>
 
-          <CustomInput label="Email" placeholder="Enter Email" />
-          <CustomInput label="Password" placeholder="Enter Password" />
+          <CustomInput
+            label={t('email')}
+            placeholder={t('email_placeholder')}
+          />
+
+          <CustomInput
+            label={t('password')}
+            placeholder={t('password_placeholder')}
+          />
 
           <Text
             fontFamily={fontFamily.mo400}
             fontSize={12}
             textAlign="right"
             color={colors.metallic_gray}>
-            Forgot Password ?
+            {t('forgot_password')}
           </Text>
         </Scroll>
 
         <GradientButton
-          mb={20}
+          mb={16}
           label="Login"
           onPress={() => {
             navigation.navigate(PLAN_STACK);

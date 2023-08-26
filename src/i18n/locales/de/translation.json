@@ -1,6 +1,6 @@
 {
-  "btn_login": "Anmeldung",
-  "btn_join_now": "Jetzt beitreten",
-  "link_privacy_policy": "Datenschutzrichtlinie",
-  "link_terms_n_condition": "Bedingungen"
+  "login": "Anmeldung",
+  "join_now": "Jetzt beitreten",
+  "privacy_policy": "Datenschutzrichtlinie",
+  "terms_n_condition": "Bedingungen"
 }

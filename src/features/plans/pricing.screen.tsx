@@ -5,7 +5,7 @@ import {Scroll} from '@components/layouts/Scroll';
 import {useTheme} from 'styled-components';
 import {useAppNavigation} from '@hooks/useAppNavigation';
 import {GradientButton} from '@components/GradientButton';
-import {Images} from '@assets/Images';
+import {Icons, Images} from '@assets/Images';
 import {SafeArea} from '@components/layouts/SafeArea';
 import {StatusBar} from 'react-native';
 import {Box, FlexBox} from '@components/layouts/Box';
@@ -13,10 +13,25 @@ import {Text} from '@components/layouts/Text';
 import {GradientBox} from '@components/layouts/GradientBox';
 import {GradientText} from '@components/GradientText';
 import {BlurBox} from '@components/layouts/BlurBox';
+import {useTranslation} from 'react-i18next';
+import {useAppDispatch, useAppSelector} from '@hooks/useConnect';
+import {setPlan} from '@store/pricing.slice';
+import {ActiveButton} from '@components/layouts/Button';
+import {screens} from '@constants/sizes';
+import {SvgImage} from '@components/layouts/SvgImage';
+import {QUESTIONS_SCREEN} from '@constants/screens';
 
 const Pricing = () => {
   const navigation = useAppNavigation();
+  const dispatch = useAppDispatch();
+  const plan = useAppSelector(state => state.pricing.plan);
+
   const {colors, fontFamily} = useTheme();
+  const {t} = useTranslation();
+
+  const handleChangePlan = (_plan: 'basic' | 'annual') => {
+    dispatch(setPlan(_plan));
+  };
 
   return (
     <Container>
@@ -27,7 +42,7 @@ const Pricing = () => {
         alignItems={'center'}>
         <Image
           source={Images.pricingBanner}
-          width="100%"
+          width={screens.width}
           style={{aspectRatio: 360 / 390, height: undefined}}
           borderBottomLeftRadius={24}
           borderBottomRightRadius={24}
@@ -49,14 +64,14 @@ const Pricing = () => {
             fontFamily={fontFamily.mo500}
             fontSize={16}
             mb={8}>
-            Pricing Plan
+            {t('pricing_plan')}
           </Text>
           <Text
             color={colors.white}
             fontFamily={fontFamily.mi500}
             fontSize={20}
             mb={24}>
-            Membership pricing plans
+            {t('membership_pricing_plans')}
           </Text>
           <Text
             color={colors.white}
@@ -75,32 +90,62 @@ const Pricing = () => {
             <Box height={24} />
 
             {/* basic */}
-            <Box
+            <ActiveButton
               flexDirection={'row'}
               width={'100%'}
               height={80}
               border={1}
-              borderColor={colors.bright_gray}
+              borderColor={
+                plan === 'basic' ? colors.primary_first : colors.bright_gray
+              }
               alignItems={'center'}
               borderRadius={16}
-              px={24}
-              mb={24}>
-              <Box
+              pr={24}
+              mb={24}
+              onPress={() => handleChangePlan('basic')}>
+              <GradientBox
+                colors={
+                  plan === 'basic'
+                    ? [colors.primary_first, colors.primary_second]
+                    : [colors.transparent, colors.transparent]
+                }
+                borderColor={
+                  plan === 'annual' ? colors.transparent : colors.bright_gray
+                }
+                width={2}
+                height={32}
+                mr={14}
+                ml={8}
+                borderRadius={2}
+              />
+              <GradientBox
                 width={48}
                 height={48}
                 border={1}
-                borderColor={colors.bright_gray}
+                colors={
+                  plan === 'basic'
+                    ? [colors.primary_first, colors.primary_second]
+                    : [colors.transparent, colors.transparent]
+                }
+                borderColor={
+                  plan === 'basic' ? colors.transparent : colors.bright_gray
+                }
                 justifyContent={'center'}
                 alignItems={'center'}
                 borderRadius={24}>
-                <Image source={Images.pricingIcon2} width={24} height={17} />
-              </Box>
+                <SvgImage
+                  asset={Icons.pricingIcon1}
+                  width={24}
+                  height={17}
+                  color={plan === 'basic' ? colors.white : colors.raisin_black}
+                />
+              </GradientBox>
               <Box width={16} />
               <Text
                 color={colors.raisin_black}
                 fontFamily={fontFamily.mo600}
                 fontSize={16}>
-                Basic Plan
+                {t('basic_plan')}
               </Text>
               <FlexBox />
               <Text
@@ -109,21 +154,32 @@ const Pricing = () => {
                 fontSize={24}>
                 $19
               </Text>
-            </Box>
+            </ActiveButton>
 
-            <Box
+            {/* annual */}
+            <ActiveButton
               position={'relative'}
               flexDirection={'row'}
               width={'100%'}
               height={80}
               border={1}
-              borderColor={colors.primary_first}
+              borderColor={
+                plan === 'annual' ? colors.primary_first : colors.bright_gray
+              }
               alignItems={'center'}
               borderRadius={16}
               pr={24}
-              mb={24}>
+              mb={24}
+              onPress={() => handleChangePlan('annual')}>
               <GradientBox
-                colors={[colors.primary_first, colors.primary_second]}
+                colors={
+                  plan === 'annual'
+                    ? [colors.primary_first, colors.primary_second]
+                    : [colors.transparent, colors.transparent]
+                }
+                borderColor={
+                  plan === 'annual' ? colors.transparent : colors.bright_gray
+                }
                 width={2}
                 height={32}
                 mr={14}
@@ -137,15 +193,24 @@ const Pricing = () => {
                 justifyContent={'center'}
                 alignItems={'center'}
                 borderRadius={24}
-                colors={[colors.primary_first, colors.primary_second]}>
-                <Image source={Images.pricingIcon1} width={24} height={17} />
+                colors={
+                  plan === 'annual'
+                    ? [colors.primary_first, colors.primary_second]
+                    : [colors.transparent, colors.transparent]
+                }>
+                <SvgImage
+                  asset={Icons.pricingIcon2}
+                  width={24}
+                  height={17}
+                  color={plan === 'annual' ? colors.white : colors.raisin_black}
+                />
               </GradientBox>
               <Box width={16} />
               <Text
                 color={colors.raisin_black}
                 fontFamily={fontFamily.mo600}
                 fontSize={16}>
-                Annual Plan
+                {t('annual_plan')}
               </Text>
               <FlexBox />
               <Text
@@ -162,10 +227,10 @@ const Pricing = () => {
                 backgroundColor={colors.white}
                 px={4}>
                 <GradientText fontSize={12} fontFamily={fontFamily.mi500}>
-                  Most Popular
+                  {t('most_popular')}
                 </GradientText>
               </Box>
-            </Box>
+            </ActiveButton>
 
             <Box flexDirection={'row'} alignItems={'center'} mb={8}>
               <Image source={Images.checkMark} width={20} height={20} />
@@ -198,7 +263,13 @@ const Pricing = () => {
               </Text>
             </Box>
           </Scroll>
-          <GradientButton mb={20} label="Buy Now" onPress={() => {}} />
+          <GradientButton
+            mb={16}
+            label={t('buy_now')}
+            onPress={() => {
+              navigation.navigate(QUESTIONS_SCREEN);
+            }}
+          />
         </FlexBox>
       </SafeArea>
     </Container>

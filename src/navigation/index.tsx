@@ -9,7 +9,9 @@ import {
   LOGIN_SCREEN,
   PLAN_STACK,
   PRICING_SCREEN,
+  QUESTIONS_SCREEN,
   SIGN_UP_SCREEN,
+  SUCCESS_SCREEN,
 } from '@constants/screens';
 import PlansStack from './plans.navigation';
 
@@ -21,6 +23,8 @@ export type RootStackParamList = {
 
   [PLAN_STACK]: undefined;
   [PRICING_SCREEN]: undefined;
+  [QUESTIONS_SCREEN]: undefined;
+  [SUCCESS_SCREEN]: undefined;
 };
 
 const Stack = createStackNavigator();
@@ -37,7 +41,8 @@ const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
-        initialRouteName={AUTH_STACK}
+        // initialRouteName={AUTH_STACK}
+        initialRouteName={PLAN_STACK}
         screenOptions={() => ({
           headerShown: false,
         })}>

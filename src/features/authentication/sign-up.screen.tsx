@@ -5,19 +5,21 @@ import {Image} from '@components/layouts/Image';
 import {Scroll} from '@components/layouts/Scroll';
 import {useTheme} from 'styled-components';
 import {useAppNavigation} from '@hooks/useAppNavigation';
-import {LOGIN_SCREEN} from '@constants/screens';
+import {LOGIN_SCREEN, PLAN_STACK} from '@constants/screens';
 import {Text} from '@components/layouts/Text';
 import {Box} from '@components/layouts/Box';
 import {Button} from '@components/layouts/Button';
 import {Images} from '@assets/Images';
 import {GradientText} from '@components/GradientText';
-import CustomInput from '@components/Input';
+import CustomInput from '@components/CustomInput';
 import {SafeArea} from '@components/layouts/SafeArea';
 import {StatusBar} from 'react-native';
+import {useTranslation} from 'react-i18next';
 
 const SignUp = () => {
   const navigation = useAppNavigation();
   const {colors, fontFamily} = useTheme();
+  const {t} = useTranslation();
 
   return (
     <SafeArea>
@@ -34,19 +36,19 @@ const SignUp = () => {
         />
         <Scroll>
           <Text mb={8} color={colors.raisin_black} fontSize={20}>
-            Create New Account
+            {t('signup_label')}
           </Text>
           <Box flexDirection="row" mb={32}>
             <Text
               fontSize={10}
               color={colors.metallic_gray}
               fontFamily={fontFamily.mo400}>
-              Already have an account?{' '}
+              {t('already_have_an_account')}{' '}
             </Text>
 
             <Button onPress={() => navigation.navigate(LOGIN_SCREEN)}>
               <GradientText fontFamily={fontFamily.mo700} fontSize={10}>
-                Login
+                {t('login')}
               </GradientText>
             </Button>
           </Box>
@@ -55,16 +57,22 @@ const SignUp = () => {
           <CustomInput label="Last Name" placeholder="Enter Last Name" />
           <CustomInput label="Email" placeholder="Enter Email" />
           <CustomInput
-            label="Create Password"
-            placeholder="Enter Create Password"
+            label={t('create_password')}
+            placeholder={t('password_placeholder')}
           />
           <CustomInput
-            label="Re-enter Created Password"
-            placeholder="Enter Re-enter Created Password"
+            label={t('confirm_password')}
+            placeholder={t('confirm_password_placeholder')}
           />
         </Scroll>
 
-        <GradientButton mb={20} label="Create Account" onPress={() => {}} />
+        <GradientButton
+          mb={16}
+          label={t('create_account')}
+          onPress={() => {
+            navigation.navigate(PLAN_STACK);
+          }}
+        />
       </Container>
     </SafeArea>
   );

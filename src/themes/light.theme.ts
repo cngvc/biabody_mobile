@@ -3,6 +3,7 @@ import {DefaultTheme} from 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
+      transparent: string;
       primary_first: string;
       primary_second: string;
       white: string;
@@ -17,7 +18,6 @@ declare module 'styled-components' {
       xl: string;
     };
     fontFamily: {
-      mi200: string;
       mi300: string;
       mi400: string;
       mi500: string;
@@ -36,6 +36,7 @@ declare module 'styled-components' {
 
 const theme: DefaultTheme = {
   colors: {
+    transparent: 'transparent',
     primary_first: '#ED1653',
     primary_second: '#F15822',
     white: '#FFFFFF',
@@ -50,7 +51,6 @@ const theme: DefaultTheme = {
     xl: '1200px',
   },
   fontFamily: {
-    mi200: 'Mitr-ExtraLight',
     mi300: 'Mitr-Light',
     mi400: 'Mitr-Regular',
     mi500: 'Mitr-Medium',
@@ -58,7 +58,7 @@ const theme: DefaultTheme = {
     mo300: 'Montserrat-Light',
     mo400: 'Montserrat-Regular',
     mo500: 'Montserrat-Medium',
-    mo600: 'Montserrat-Medium',
+    mo600: 'Montserrat-SemiBold',
     mo700: 'Montserrat-Bold',
   },
   fontSizes: {

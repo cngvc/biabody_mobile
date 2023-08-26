@@ -7,17 +7,24 @@ import {
 } from '@reduxjs/toolkit';
 
 import commonSlice, {CommonState, initialState as common} from './common.slice';
+import pricingSlice, {
+  PricingState,
+  initialState as pricing,
+} from './pricing.slice';
 
 export interface RootState {
   common: CommonState;
+  pricing: PricingState;
 }
 
 const initialState: RootState = {
   common: {...common},
+  pricing: {...pricing},
 };
 
 const appReducer = combineReducers<RootState>({
   common: commonSlice,
+  pricing: pricingSlice,
 });
 
 export const RESET_STORE = 'RESET_STORE';

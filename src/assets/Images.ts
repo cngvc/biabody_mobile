@@ -3,7 +3,12 @@ export const Images = {
   logoWhite: require('./images/logo.png'),
   logoGradient: require('./images/logo_gradient.png'),
   pricingBanner: require('./images/pricing_banner.png'),
-  pricingIcon1: require('./images/pricing_icon_1.png'),
-  pricingIcon2: require('./images/pricing_icon_2.png'),
   checkMark: require('./images/check_mark.png'),
+};
+
+export const Icons = {
+  leftArrow: require('./icons/left-arrow.svg'),
+  pricingIcon1: require('./icons/pricing_icon_1.svg'),
+  pricingIcon2: require('./icons/pricing_icon_2.svg'),
+  pricingSuccess: require('./icons/pricing_success.svg'),
 };

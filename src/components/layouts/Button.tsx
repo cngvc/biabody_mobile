@@ -35,6 +35,19 @@ export const Button = styled.TouchableOpacity.attrs({
   ${position}
 `;
 
+export const ActiveButton = styled.TouchableOpacity.attrs({
+  activeOpacity: 1,
+})<ButtonProps>`
+  justify-content: center;
+  align-items: center;
+  ${color}
+  ${space}
+  ${layout}
+  ${border}
+  ${flexbox}
+  ${position}
+`;
+
 export const FlexButton = styled.TouchableOpacity.attrs({
   activeOpacity: 0.8,
 })<ButtonProps>`
