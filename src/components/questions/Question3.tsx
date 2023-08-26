@@ -33,14 +33,6 @@ const Question3 = () => {
   const [isOpenHeightPicker, setOpenHeightPicker] = React.useState(false);
   const [isOpenWeightPicker, setOpenWeightPicker] = React.useState(false);
 
-  console.log(
-    heightInt,
-    heightDecimal,
-    heightUnit,
-    weightInt,
-    weightDecimal,
-    weightUnit,
-  );
   const intHeightOptions = useMemo(() => {
     const results = [];
     for (let i = 0; i <= 9; i++) {
@@ -129,7 +121,7 @@ const Question3 = () => {
             <Box flex={1}>
               <PickerIOS
                 selectedValue={`${heightUnit}`}
-                onValueChange={item => dispatch(setHeightUnit(Number(item)))}>
+                onValueChange={item => dispatch(setHeightUnit(item))}>
                 <PickerIOS.Item label="Metric (lb)" value="lb" />
                 <PickerIOS.Item label="Imperial (ft)" value="ft" />
               </PickerIOS>
@@ -143,7 +135,7 @@ const Question3 = () => {
           open={isOpenWeightPicker}
           icon={Icons.question3Option2}
           onPress={() => setOpenWeightPicker(cur => !cur)}
-          label={`${heightInt}'${heightDecimal}'' ${heightUnit}`}
+          label={`${weightInt}'${weightDecimal}'' ${weightUnit}`}
           mb={4}
         />
 
