@@ -61,7 +61,7 @@ const Question5 = () => {
     <Container px={16}>
       <Scroll>
         <Text mb={24} fontSize={20} fontFamily={fontFamily.mi400}>
-          {t('question_6_label')}
+          {t('question_7_label')}
         </Text>
         <Text
           fontSize={12}
