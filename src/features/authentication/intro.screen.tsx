@@ -12,10 +12,12 @@ import {Images} from '@assets/Images';
 import {SafeArea} from '@components/layouts/SafeArea';
 import {GradientButton} from '@components/GradientButton';
 import {StatusBar} from 'react-native';
+import {useTranslation} from 'react-i18next';
 
 export const IntroScreen = () => {
   const navigation = useAppNavigation();
   const {colors} = useTheme();
+  const {t} = useTranslation();
 
   return (
     <FlexImageBackgroundBox source={Images.backgroundIntro}>
@@ -37,25 +39,25 @@ export const IntroScreen = () => {
           <OutlineButton
             flex={1}
             onPress={() => navigation.navigate(LOGIN_SCREEN)}
-            label="Login"
+            label={t('btn_login')}
           />
           <Box width={16} />
           <GradientButton
             flex={1}
             onPress={() => navigation.navigate(SIGN_UP_SCREEN)}
-            label="Join Now"
+            label={t('btn_join_now')}
           />
         </Box>
         <Box flexDirection="row" justifyContent="center" mb={20}>
           <Button>
             <Text fontSize={10} color={colors}>
-              Privacy Policy
+              {t('link_privacy_policy')}
             </Text>
           </Button>
           <Box width={16} />
           <Button>
             <Text fontSize={10} color={colors}>
-              Terms & Condition
+              {t('link_terms_n_condition')}
             </Text>
           </Button>
         </Box>

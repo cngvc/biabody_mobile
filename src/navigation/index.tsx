@@ -37,7 +37,7 @@ const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
-        initialRouteName={PLAN_STACK}
+        initialRouteName={AUTH_STACK}
         screenOptions={() => ({
           headerShown: false,
         })}>
