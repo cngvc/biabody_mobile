@@ -17,6 +17,8 @@ import Question4 from '@components/questions/Question4';
 import Question5 from '@components/questions/Question5';
 import Question6 from '@components/questions/Question6';
 import Question7 from '@components/questions/Question7';
+import {useAppNavigation} from '@hooks/useAppNavigation';
+import {SUCCESS_SCREEN} from '@constants/screens';
 
 const sceneKeys = {
   '1': '1',
@@ -40,6 +42,7 @@ const scenes = SceneMap({
 
 const Questions = () => {
   const {t} = useTranslation();
+  const navigation = useAppNavigation();
   const [tabIndex, setTabIndex] = React.useState(0);
 
   return (
@@ -85,6 +88,9 @@ const Questions = () => {
             mb={16}
             label={t('continue')}
             onPress={() => {
+              if (tabIndex === NUMBER_OF_QUESTIONS - 1) {
+                navigation.navigate(SUCCESS_SCREEN);
+              }
               setTabIndex(cur => Math.min(cur + 1, NUMBER_OF_QUESTIONS - 1));
             }}
           />

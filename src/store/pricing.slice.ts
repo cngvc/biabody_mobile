@@ -14,6 +14,13 @@ export interface PricingState {
     | 'lactose'
     | 'gluten'
   )[];
+  healthIssue:
+    | 'diabetes'
+    | 'depression'
+    | 'pcod_pcos'
+    | 'high_blood_pressure'
+    | 'eating_disorder'
+    | 'heart_condition';
 }
 
 export const initialState: PricingState = {
@@ -22,6 +29,7 @@ export const initialState: PricingState = {
   sex: 'male',
   dietary: 'gluten-free',
   allergies: [],
+  healthIssue: 'diabetes',
 };
 
 export const pricingSlice = createSlice({
@@ -49,9 +57,18 @@ export const pricingSlice = createSlice({
       }
       state.allergies = allergies;
     },
+    setHealthIssue: (state, action) => {
+      state.healthIssue = action.payload;
+    },
   },
 });
 
-export const {setPlan, setGoal, setSex, setDietary, setAllergies} =
-  pricingSlice.actions;
+export const {
+  setPlan,
+  setGoal,
+  setSex,
+  setDietary,
+  setAllergies,
+  setHealthIssue,
+} = pricingSlice.actions;
 export default pricingSlice.reducer;

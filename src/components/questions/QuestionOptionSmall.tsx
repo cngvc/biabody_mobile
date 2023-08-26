@@ -40,7 +40,7 @@ const QuestionOptionSmall: React.FC<QuestionOptionSmallProps> = ({
           !selected ? [colors.raisin_black, colors.raisin_black] : undefined
         }
       />
-      <Box width={16} />
+      <Box width={8} />
       <FlexBox>
         <Text
           color={colors.raisin_black}

@@ -71,5 +71,12 @@
   "question_6_option_4_label": "Egg",
   "question_6_option_5_label": "Milk",
   "question_6_option_6_label": "Lactose",
-  "question_6_option_7_label": "Gluten"
+  "question_6_option_7_label": "Gluten",
+
+  "question_7_option_1_label": "Diabetes",
+  "question_7_option_2_label": "Depression",
+  "question_7_option_3_label": "PCOD/PCOS",
+  "question_7_option_4_label": "High blood pressure",
+  "question_7_option_5_label": "Eating Disorder",
+  "question_7_option_6_label": "Heart Condition"
 }

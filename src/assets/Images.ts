@@ -37,4 +37,11 @@ export const Icons = {
   question6Option5: require('./icons/question_6_option_5.svg'),
   question6Option6: require('./icons/question_6_option_6.svg'),
   question6Option7: require('./icons/question_6_option_7.svg'),
+
+  question7Option1: require('./icons/question_7_option_1.svg'),
+  question7Option2: require('./icons/question_7_option_2.svg'),
+  question7Option3: require('./icons/question_7_option_3.svg'),
+  question7Option4: require('./icons/question_7_option_4.svg'),
+  question7Option5: require('./icons/question_7_option_5.svg'),
+  question7Option6: require('./icons/question_7_option_6.svg'),
 };
