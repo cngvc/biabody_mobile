@@ -23,6 +23,9 @@ export const Icons = {
   question2Option3: require('./icons/question_2_option_3.svg'),
   question2Option4: require('./icons/question_2_option_4.svg'),
 
+  question3Option1: require('./icons/question_3_option_1.svg'),
+  question3Option2: require('./icons/question_3_option_2.svg'),
+
   question4Option1: require('./icons/question_4_option_1.svg'),
   question4Option2: require('./icons/question_4_option_2.svg'),
   question4Option3: require('./icons/question_4_option_3.svg'),

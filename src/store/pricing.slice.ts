@@ -23,6 +23,14 @@ export interface PricingState {
     | 'eating_disorder'
     | 'heart_condition';
   dob: number;
+
+  heightInt: number;
+  heightDecimal: number;
+  heightUnit: 'lb' | 'ft';
+
+  weightInt: number;
+  weightDecimal: number;
+  weightUnit: 'lbs' | 'kg';
 }
 
 export const initialState: PricingState = {
@@ -33,6 +41,14 @@ export const initialState: PricingState = {
   allergies: [],
   healthIssue: 'diabetes',
   dob: moment().valueOf(),
+
+  heightInt: 5,
+  heightDecimal: 10,
+  heightUnit: 'ft',
+
+  weightInt: 60,
+  weightDecimal: 0,
+  weightUnit: 'kg',
 };
 
 export const pricingSlice = createSlice({
@@ -66,6 +82,25 @@ export const pricingSlice = createSlice({
     setHealthIssue: (state, action) => {
       state.healthIssue = action.payload;
     },
+    setHeightInt: (state, action) => {
+      state.heightInt = action.payload;
+    },
+    setHeightDecimal: (state, action) => {
+      state.heightDecimal = action.payload;
+    },
+    setHeightUnit: (state, action) => {
+      state.heightUnit = action.payload;
+    },
+
+    setWeightInt: (state, action) => {
+      state.weightInt = action.payload;
+    },
+    setWeightDecimal: (state, action) => {
+      state.weightDecimal = action.payload;
+    },
+    setWeightUnit: (state, action) => {
+      state.weightUnit = action.payload;
+    },
   },
 });
 
@@ -77,5 +112,11 @@ export const {
   setDietary,
   setAllergies,
   setHealthIssue,
+  setHeightInt,
+  setHeightDecimal,
+  setHeightUnit,
+  setWeightInt,
+  setWeightDecimal,
+  setWeightUnit,
 } = pricingSlice.actions;
 export default pricingSlice.reducer;

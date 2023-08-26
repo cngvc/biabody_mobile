@@ -1,14 +1,14 @@
 import {Icons} from '@assets/Images';
 import {GradientIcon} from '@components/GradientIcon';
 import {Box, FlexBox} from '@components/layouts/Box';
-import {ActiveButton} from '@components/layouts/Button';
+import {ActiveButton, ButtonProps} from '@components/layouts/Button';
 import {SvgImage} from '@components/layouts/SvgImage';
 import {Text} from '@components/layouts/Text';
 import React from 'react';
 import {ImageSourcePropType} from 'react-native';
 import {useTheme} from 'styled-components';
 
-interface QuestionOptionDropdownProps {
+interface QuestionOptionDropdownProps extends ButtonProps {
   open: boolean;
   onPress: Function;
   icon: ImageSourcePropType;
@@ -20,6 +20,7 @@ const QuestionOptionDropdown: React.FC<QuestionOptionDropdownProps> = ({
   onPress,
   icon,
   label,
+  ...rest
 }) => {
   const {colors, fontFamily} = useTheme();
 
@@ -33,7 +34,8 @@ const QuestionOptionDropdown: React.FC<QuestionOptionDropdownProps> = ({
       borderRadius={12}
       p={16}
       mb={24}
-      onPress={() => onPress()}>
+      onPress={() => onPress()}
+      {...rest}>
       <GradientIcon
         asset={icon}
         width={24}
