@@ -13,7 +13,7 @@ interface QuestionOptionSmallProps {
   label: string;
 }
 
-const QuestionOptionSmall: React.FC<QuestionOptionSmallProps> = ({
+const QuestionOptionSimple: React.FC<QuestionOptionSmallProps> = ({
   selected,
   onPress,
   icon,
@@ -53,4 +53,4 @@ const QuestionOptionSmall: React.FC<QuestionOptionSmallProps> = ({
   );
 };
 
-export default QuestionOptionSmall;
+export default QuestionOptionSimple;

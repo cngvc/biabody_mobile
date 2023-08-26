@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
+import moment from 'moment';
 
 export interface PricingState {
   plan: 'basic' | 'annual';
@@ -21,6 +22,7 @@ export interface PricingState {
     | 'high_blood_pressure'
     | 'eating_disorder'
     | 'heart_condition';
+  dob: number;
 }
 
 export const initialState: PricingState = {
@@ -30,6 +32,7 @@ export const initialState: PricingState = {
   dietary: 'gluten-free',
   allergies: [],
   healthIssue: 'diabetes',
+  dob: moment().valueOf(),
 };
 
 export const pricingSlice = createSlice({
@@ -44,6 +47,9 @@ export const pricingSlice = createSlice({
     },
     setSex: (state, action) => {
       state.sex = action.payload;
+    },
+    setDob: (state, action) => {
+      state.dob = action.payload;
     },
     setDietary: (state, action) => {
       state.dietary = action.payload;
@@ -67,6 +73,7 @@ export const {
   setPlan,
   setGoal,
   setSex,
+  setDob,
   setDietary,
   setAllergies,
   setHealthIssue,

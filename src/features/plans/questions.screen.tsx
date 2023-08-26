@@ -75,11 +75,8 @@ const Questions = () => {
                 {key: sceneKeys['7']},
               ],
             }}
-            onTouchEndCapture={e => {
-              console.log(e);
-            }}
             renderScene={scenes}
-            onIndexChange={setTabIndex}
+            onIndexChange={() => {}}
             initialLayout={{width: screens.width}}
           />
         </FlexBox>

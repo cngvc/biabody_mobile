@@ -8,7 +8,7 @@ import {Icons} from '@assets/Images';
 import {useAppDispatch, useAppSelector} from '@hooks/useConnect';
 import {setHealthIssue} from '@store/pricing.slice';
 import {Box} from '@components/layouts/Box';
-import QuestionOptionSmall from './QuestionOptionSmall';
+import QuestionOptionSimple from './QuestionOptionSimple';
 
 const Question5 = () => {
   const {colors, fontFamily} = useTheme();
@@ -74,7 +74,7 @@ const Question5 = () => {
 
         {options.map((e, index) => (
           <Fragment key={index}>
-            <QuestionOptionSmall
+            <QuestionOptionSimple
               icon={e.icon}
               onPress={e.onPress}
               selected={e.selected}

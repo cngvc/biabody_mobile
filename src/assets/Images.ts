@@ -8,6 +8,7 @@ export const Images = {
 
 export const Icons = {
   leftArrow: require('./icons/left-arrow.svg'),
+  topArrow: require('./icons/top-arrow.svg'),
   pricingIcon1: require('./icons/pricing_icon_1.svg'),
   pricingIcon2: require('./icons/pricing_icon_2.svg'),
   pricingSuccess: require('./icons/pricing_success.svg'),
@@ -25,6 +26,7 @@ export const Icons = {
   question4Option1: require('./icons/question_4_option_1.svg'),
   question4Option2: require('./icons/question_4_option_2.svg'),
   question4Option3: require('./icons/question_4_option_3.svg'),
+  question4calender: require('./icons/question_4_calender.svg'),
 
   question5Option1: require('./icons/question_5_option_1.svg'),
   question5Option2: require('./icons/question_5_option_2.svg'),
