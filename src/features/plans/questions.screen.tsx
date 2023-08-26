@@ -3,15 +3,15 @@ import {Container} from '@components/layouts/Container';
 import {SafeArea} from '@components/layouts/SafeArea';
 import {StatusBar} from 'react-native';
 import {useTranslation} from 'react-i18next';
-import QuestionProcess from '@components/QuestionProcess';
+import QuestionProcess from '@components/questions/QuestionProcess';
 import {GradientButton} from '@components/GradientButton';
 import {SceneMap, TabView} from 'react-native-tab-view';
 import {screens} from '@constants/sizes';
 import {Box, FlexBox} from '@components/layouts/Box';
+import {NUMBER_OF_QUESTIONS} from '@constants/commons';
 
 import Question1 from '@components/questions/Question1';
 import Question2 from '@components/questions/Question2';
-import {NUMBER_OF_QUESTIONS} from '@constants/commons';
 import Question3 from '@components/questions/Question3';
 import Question4 from '@components/questions/Question4';
 import Question5 from '@components/questions/Question5';
@@ -47,9 +47,11 @@ const Questions = () => {
       <StatusBar barStyle={'dark-content'} />
       <QuestionProcess
         number={tabIndex + 1}
-        onBack={() => {
-          setTabIndex(cur => Math.max(cur - 1, 0));
-        }}
+        onBack={
+          tabIndex === 0
+            ? undefined
+            : () => setTabIndex(cur => Math.max(cur - 1, 0))
+        }
       />
       <Container>
         <FlexBox>

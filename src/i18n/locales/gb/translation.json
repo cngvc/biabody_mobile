@@ -35,7 +35,41 @@
   "question_5_label": "Do you have dietary preference?",
   "question_6_label": "Do you have allergies?",
   "question_7_label": "Facing any health issues?",
-  "success_label": "THANKS!",
 
-  "continue": "Continue"
+  "question_1_option_1_label": "Build Muscle",
+  "question_1_option_1_description": "Quisque lectus eget volutpat aliquet",
+  "question_1_option_2_label": "Get Fit",
+  "question_1_option_2_description": "Quisque lectus eget volutpat aliquet",
+  "question_1_option_3_label": "Loose Weight",
+  "question_1_option_3_description": "Quisque lectus eget volutpat aliquet",
+  "question_1_option_4_label": "Stay Healthy",
+  "question_1_option_4_description": "Quisque lectus eget volutpat aliquet",
+
+  "question_2_option_1_label": "Absolute Beginner",
+  "question_2_option_1_description": "Quisque lectus eget volutpat aliquet",
+  "question_2_option_2_label": "Moderately Fit",
+  "question_2_option_2_description": "Quisque lectus eget volutpat aliquet",
+  "question_2_option_3_label": "Fit",
+  "question_2_option_3_description": "Quisque lectus eget volutpat aliquet",
+  "question_2_option_4_label": "In Great shape",
+  "question_2_option_4_description": "Quisque lectus eget volutpat aliquet",
+
+  "success_label": "THANKS!",
+  "continue": "Continue",
+
+  "question_4_option_1_label": "Male",
+  "question_4_option_2_label": "Female",
+  "question_4_option_3_label": "Others",
+
+  "question_5_option_1_label": "Gluten-free",
+  "question_5_option_2_label": "Vegan",
+  "question_5_option_3_label": "Vegetarian",
+
+  "question_6_option_1_label": "Nuts",
+  "question_6_option_2_label": "Fish",
+  "question_6_option_3_label": "Shellfish",
+  "question_6_option_4_label": "Egg",
+  "question_6_option_5_label": "Milk",
+  "question_6_option_6_label": "Lactose",
+  "question_6_option_7_label": "Gluten"
 }

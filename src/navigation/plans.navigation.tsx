@@ -24,7 +24,7 @@ const PlansStack: React.FC = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName={SUCCESS_SCREEN}>
+      initialRouteName={QUESTIONS_SCREEN}>
       <Stack.Screen name={PRICING_SCREEN} component={Pricing} />
       <Stack.Screen name={QUESTIONS_SCREEN} component={Questions} />
       <Stack.Screen name={SUCCESS_SCREEN} component={Success} />

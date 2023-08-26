@@ -27,7 +27,8 @@ const Success = () => {
           <Text
             fontSize={12}
             color={colors.metallic_gray}
-            fontFamily={fontFamily.mo400}>
+            fontFamily={fontFamily.mo400}
+            textAlign={'center'}>
             Lorem ipsum dolor sit amet consectetur. Quisque lectus eget volutpat
             aliquet phasellus massa in ut turpis.{' '}
           </Text>

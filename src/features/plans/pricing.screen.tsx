@@ -18,8 +18,8 @@ import {useAppDispatch, useAppSelector} from '@hooks/useConnect';
 import {setPlan} from '@store/pricing.slice';
 import {ActiveButton} from '@components/layouts/Button';
 import {screens} from '@constants/sizes';
-import {SvgImage} from '@components/layouts/SvgImage';
 import {QUESTIONS_SCREEN} from '@constants/screens';
+import {GradientIcon} from '@components/GradientIcon';
 
 const Pricing = () => {
   const navigation = useAppNavigation();
@@ -133,11 +133,15 @@ const Pricing = () => {
                 justifyContent={'center'}
                 alignItems={'center'}
                 borderRadius={24}>
-                <SvgImage
+                <GradientIcon
                   asset={Icons.pricingIcon1}
                   width={24}
                   height={17}
-                  color={plan === 'basic' ? colors.white : colors.raisin_black}
+                  colors={
+                    plan === 'basic'
+                      ? [colors.white, colors.white]
+                      : [colors.raisin_black, colors.raisin_black]
+                  }
                 />
               </GradientBox>
               <Box width={16} />
@@ -198,11 +202,15 @@ const Pricing = () => {
                     ? [colors.primary_first, colors.primary_second]
                     : [colors.transparent, colors.transparent]
                 }>
-                <SvgImage
+                <GradientIcon
                   asset={Icons.pricingIcon2}
                   width={24}
                   height={17}
-                  color={plan === 'annual' ? colors.white : colors.raisin_black}
+                  colors={
+                    plan === 'annual'
+                      ? [colors.white, colors.white]
+                      : [colors.raisin_black, colors.raisin_black]
+                  }
                 />
               </GradientBox>
               <Box width={16} />
