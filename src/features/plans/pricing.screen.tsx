@@ -35,7 +35,11 @@ const Pricing = () => {
 
   return (
     <Container>
-      <StatusBar barStyle={'light-content'} />
+      <StatusBar
+        barStyle={'light-content'}
+        translucent
+        backgroundColor="transparent"
+      />
       <Box
         position={'relative'}
         justifyContent={'flex-end'}

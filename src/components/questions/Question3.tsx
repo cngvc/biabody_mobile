@@ -5,7 +5,7 @@ import {Text} from '@components/layouts/Text';
 import {useTranslation} from 'react-i18next';
 import {useTheme} from 'styled-components';
 import {Container} from '@components/layouts/Container';
-import {Picker, PickerIOS} from '@react-native-picker/picker';
+import {Picker} from '@react-native-picker/picker';
 import {useAppDispatch, useAppSelector} from '@hooks/useConnect';
 import {
   setHeightDecimal,
@@ -95,19 +95,20 @@ const Question3 = () => {
             borderWidth={1}
             borderColor={colors.bright_gray}
             borderRadius={12}
-            mt={4}>
+            mt={4}
+            mb={16}>
             <Box flex={1}>
-              <PickerIOS
+              <Picker
                 selectedValue={`${heightInt}`}
                 onValueChange={item => dispatch(setHeightInt(item))}>
                 {intHeightOptions.map((height, index) => (
                   <Picker.Item key={index} label={height} value={height} />
                 ))}
-              </PickerIOS>
+              </Picker>
             </Box>
 
             <Box flex={1}>
-              <PickerIOS
+              <Picker
                 selectedValue={`${heightDecimal}`}
                 onValueChange={item =>
                   dispatch(setHeightDecimal(Number(item)))
@@ -115,16 +116,16 @@ const Question3 = () => {
                 {decimalHeightOptions.map((height, index) => (
                   <Picker.Item key={index} label={height} value={height} />
                 ))}
-              </PickerIOS>
+              </Picker>
             </Box>
 
             <Box flex={1}>
-              <PickerIOS
+              <Picker
                 selectedValue={`${heightUnit}`}
                 onValueChange={item => dispatch(setHeightUnit(item))}>
-                <PickerIOS.Item label="Metric (lb)" value="lb" />
-                <PickerIOS.Item label="Imperial (ft)" value="ft" />
-              </PickerIOS>
+                <Picker.Item label="Metric (lb)" value="lb" />
+                <Picker.Item label="Imperial (ft)" value="ft" />
+              </Picker>
             </Box>
           </Box>
         ) : (
@@ -145,19 +146,20 @@ const Question3 = () => {
             borderWidth={1}
             borderColor={colors.bright_gray}
             borderRadius={12}
-            mt={4}>
+            mt={4}
+            mb={16}>
             <Box flex={1}>
-              <PickerIOS
+              <Picker
                 selectedValue={`${weightInt}`}
                 onValueChange={item => dispatch(setWeightInt(Number(item)))}>
                 {intWeightOptions.map((height, index) => (
                   <Picker.Item key={index} label={height} value={height} />
                 ))}
-              </PickerIOS>
+              </Picker>
             </Box>
 
             <Box flex={1}>
-              <PickerIOS
+              <Picker
                 selectedValue={`${weightDecimal}`}
                 onValueChange={item =>
                   dispatch(setWeightDecimal(Number(item)))
@@ -165,16 +167,16 @@ const Question3 = () => {
                 {decimalWeightOptions.map((height, index) => (
                   <Picker.Item key={index} label={height} value={height} />
                 ))}
-              </PickerIOS>
+              </Picker>
             </Box>
 
             <Box flex={1}>
-              <PickerIOS
+              <Picker
                 selectedValue={`${weightUnit}`}
                 onValueChange={item => dispatch(setWeightUnit(item))}>
-                <PickerIOS.Item label="Kilogram (kg)" value="kg" />
-                <PickerIOS.Item label="Pounds (lbs)" value="lbs" />
-              </PickerIOS>
+                <Picker.Item label="Kilogram (kg)" value="kg" />
+                <Picker.Item label="Pounds (lbs)" value="lbs" />
+              </Picker>
             </Box>
           </Box>
         ) : (

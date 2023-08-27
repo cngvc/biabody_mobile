@@ -45,7 +45,8 @@ const QuestionOptionSimple: React.FC<QuestionOptionSmallProps> = ({
         <Text
           color={colors.raisin_black}
           fontFamily={fontFamily.mo500}
-          fontSize={14}>
+          fontSize={14}
+          numberOfLines={1}>
           {label}
         </Text>
       </FlexBox>

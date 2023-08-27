@@ -23,7 +23,7 @@ const SignUp = () => {
 
   return (
     <SafeArea>
-      <StatusBar barStyle={'dark-content'} />
+      <StatusBar barStyle={'dark-content'} backgroundColor="white" />
 
       <Container px={16}>
         <Image

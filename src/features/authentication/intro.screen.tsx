@@ -21,7 +21,11 @@ export const IntroScreen = () => {
 
   return (
     <FlexImageBackgroundBox source={Images.backgroundIntro}>
-      <StatusBar barStyle={'light-content'} />
+      <StatusBar
+        barStyle={'light-content'}
+        translucent
+        backgroundColor="transparent"
+      />
 
       <SafeArea>
         <Image
