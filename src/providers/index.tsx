@@ -23,4 +23,5 @@ const Theme = (props: {children?: React.ReactNode}) => (
 const SafeArea = (props: {children?: React.ReactNode}) => (
   <SafeAreaProvider>{props.children}</SafeAreaProvider>
 );
+
 export default Providers;

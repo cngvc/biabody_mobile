@@ -28,7 +28,7 @@ const CustomInput = ({label, placeholder, ...rest}: InputProps) => {
         mb={2}>
         {label}
       </Text>
-      <Input placeholder={placeholder} />
+      <Input placeholder={placeholder} fontSize={16} />
     </Box>
   );
 };

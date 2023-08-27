@@ -48,7 +48,7 @@ export const IntroScreen = () => {
             label={t('join_now')}
           />
         </Box>
-        <Box flexDirection="row" justifyContent="center" mb={20}>
+        <Box flexDirection="row" justifyContent="center" mb={16}>
           <Button>
             <Text fontSize={10} color={colors}>
               {t('privacy_policy')}
