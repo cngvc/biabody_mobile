@@ -28,7 +28,7 @@ const QuestionProcess: React.FC<QuestionProcessProps> = ({number, onBack}) => {
       px={16}
       mb={28}
       width={screens.width}
-      height={24}
+      height={48}
       flexDirection={'row'}
       alignItems={'center'}>
       {onBack && (

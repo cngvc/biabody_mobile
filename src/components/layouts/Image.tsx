@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
 import {
-  border,
+  borders,
   color,
   layout,
   space,
   flexbox,
-  BorderProps,
+  BordersProps,
   ColorProps,
   SpaceProps,
   LayoutProps,
@@ -13,7 +13,7 @@ import {
 } from 'styled-system';
 
 export interface ImageProps
-  extends BorderProps,
+  extends BordersProps,
     ColorProps,
     SpaceProps,
     FlexboxProps,
@@ -23,6 +23,6 @@ export const Image = styled.Image<ImageProps>`
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${flexbox}
 `;

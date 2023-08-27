@@ -43,7 +43,7 @@ const Pricing = () => {
         <Image
           source={Images.pricingBanner}
           width={screens.width}
-          style={{aspectRatio: 360 / 390, height: undefined}}
+          style={{aspectRatio: 1 / 1, height: undefined}}
           borderBottomLeftRadius={24}
           borderBottomRightRadius={24}
         />
@@ -52,8 +52,9 @@ const Pricing = () => {
           position={'absolute'}
           blurAmount={2}
           backgroundColor={`${colors.white}50`}
-          border={1}
+          borderWidth={1}
           borderColor={colors.white}
+          borderTopColor={colors.white}
           borderRadius={16}
           p={16}
           left={16}
@@ -94,7 +95,8 @@ const Pricing = () => {
               flexDirection={'row'}
               width={'100%'}
               height={80}
-              border={1}
+              borderWidth={1}
+              borderStyle={'dotted'}
               borderColor={
                 plan === 'basic' ? colors.primary_first : colors.bright_gray
               }
@@ -121,7 +123,7 @@ const Pricing = () => {
               <GradientBox
                 width={48}
                 height={48}
-                border={1}
+                borderWidth={1}
                 colors={
                   plan === 'basic'
                     ? [colors.primary_first, colors.primary_second]
@@ -166,7 +168,7 @@ const Pricing = () => {
               flexDirection={'row'}
               width={'100%'}
               height={80}
-              border={1}
+              borderWidth={1}
               borderColor={
                 plan === 'annual' ? colors.primary_first : colors.bright_gray
               }

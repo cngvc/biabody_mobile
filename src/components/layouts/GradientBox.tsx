@@ -1,13 +1,13 @@
 import LinearGradient from 'react-native-linear-gradient';
 import styled from 'styled-components/native';
 import {
-  border,
+  borders,
   layout,
   space,
   grid,
   flexbox,
   position,
-  BorderProps,
+  BordersProps,
   SpaceProps,
   LayoutProps,
   GridProps,
@@ -16,7 +16,7 @@ import {
 } from 'styled-system';
 
 export interface GradientBox
-  extends BorderProps,
+  extends BordersProps,
     SpaceProps,
     GridProps,
     LayoutProps,
@@ -29,7 +29,7 @@ export const GradientBox = styled(LinearGradient).attrs({
 })<GradientBox>`
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${grid}
   ${flexbox}
   ${position}

@@ -1,10 +1,10 @@
 import styled from 'styled-components/native';
 import {
-  border,
+  borders,
   color,
   layout,
   space,
-  BorderProps,
+  BordersProps,
   ColorProps,
   SpaceProps,
   LayoutProps,
@@ -13,7 +13,7 @@ import {
 } from 'styled-system';
 
 export interface InputProps
-  extends BorderProps,
+  extends BordersProps,
     ColorProps,
     SpaceProps,
     LayoutProps,
@@ -27,6 +27,6 @@ export const Input = styled.TextInput<InputProps>`
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${fontSize}
 `;

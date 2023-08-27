@@ -1,5 +1,4 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthStack from './auth.navigation';
 import {useTheme} from 'styled-components/native';
@@ -14,6 +13,7 @@ import {
   SUCCESS_SCREEN,
 } from '@constants/screens';
 import PlansStack from './plans.navigation';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   [AUTH_STACK]: undefined;
@@ -27,7 +27,7 @@ export type RootStackParamList = {
   [SUCCESS_SCREEN]: undefined;
 };
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const AppNavigator: React.FC = () => {
   const {colors} = useTheme();

@@ -25,7 +25,7 @@ const QuestionOptionSimple: React.FC<QuestionOptionSmallProps> = ({
     <ActiveButton
       flexDirection={'row'}
       flex={1}
-      border={1}
+      borderWidth={1}
       borderColor={selected ? colors.primary_first : colors.bright_gray}
       alignItems={'center'}
       borderRadius={12}

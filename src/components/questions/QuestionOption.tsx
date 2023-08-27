@@ -1,6 +1,6 @@
 import {GradientIcon} from '@components/GradientIcon';
 import {Box, FlexBox} from '@components/layouts/Box';
-import {ActiveButton} from '@components/layouts/Button';
+import {ActiveButton, Button} from '@components/layouts/Button';
 import {Text} from '@components/layouts/Text';
 import React from 'react';
 import {ImageSourcePropType} from 'react-native';
@@ -24,10 +24,10 @@ const QuestionOption: React.FC<QuestionOptionProps> = ({
   const {colors, fontFamily} = useTheme();
 
   return (
-    <ActiveButton
+    <Button
       flexDirection={'row'}
       width={'100%'}
-      border={1}
+      borderWidth={1}
       borderColor={selected ? colors.primary_first : colors.bright_gray}
       alignItems={'center'}
       borderRadius={16}
@@ -58,7 +58,7 @@ const QuestionOption: React.FC<QuestionOptionProps> = ({
           {description}
         </Text>
       </FlexBox>
-    </ActiveButton>
+    </Button>
   );
 };
 

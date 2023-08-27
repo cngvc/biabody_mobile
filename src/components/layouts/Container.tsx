@@ -1,17 +1,17 @@
 import styled from 'styled-components/native';
 import {
-  border,
+  borders,
   color,
   layout,
   space,
-  BorderProps,
+  BordersProps,
   ColorProps,
   SpaceProps,
   LayoutProps,
 } from 'styled-system';
 
 export interface ContainerProps
-  extends BorderProps,
+  extends BordersProps,
     ColorProps,
     SpaceProps,
     LayoutProps {}
@@ -22,5 +22,5 @@ export const Container = styled.View<ContainerProps>`
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
 `;

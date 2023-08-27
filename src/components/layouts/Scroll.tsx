@@ -1,13 +1,13 @@
 import styled from 'styled-components/native';
 import {
-  border,
+  borders,
   color,
   layout,
   space,
   grid,
   flexbox,
   position,
-  BorderProps,
+  BordersProps,
   ColorProps,
   SpaceProps,
   LayoutProps,
@@ -17,7 +17,7 @@ import {
 } from 'styled-system';
 
 export interface ScrollProps
-  extends BorderProps,
+  extends BordersProps,
     ColorProps,
     SpaceProps,
     GridProps,
@@ -32,7 +32,7 @@ export const Scroll = styled.ScrollView.attrs({
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${grid}
   ${flexbox}
   ${position}

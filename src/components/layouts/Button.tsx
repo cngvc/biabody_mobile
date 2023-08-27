@@ -1,12 +1,12 @@
 import styled from 'styled-components/native';
 import {
-  border,
+  borders,
   color,
   layout,
   space,
   flexbox,
   position,
-  BorderProps,
+  BordersProps,
   ColorProps,
   SpaceProps,
   LayoutProps,
@@ -15,7 +15,7 @@ import {
 } from 'styled-system';
 
 export interface ButtonProps
-  extends BorderProps,
+  extends BordersProps,
     ColorProps,
     SpaceProps,
     FlexboxProps,
@@ -30,7 +30,7 @@ export const Button = styled.TouchableOpacity.attrs({
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${flexbox}
   ${position}
 `;
@@ -43,7 +43,7 @@ export const ActiveButton = styled.TouchableOpacity.attrs({
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${flexbox}
   ${position}
 `;
@@ -57,6 +57,6 @@ export const FlexButton = styled.TouchableOpacity.attrs({
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${flexbox}
 `;

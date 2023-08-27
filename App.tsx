@@ -1,5 +1,3 @@
-import 'react-native-gesture-handler';
-
 import React from 'react';
 import Providers from '@providers';
 import AppNavigator from '@navigation';

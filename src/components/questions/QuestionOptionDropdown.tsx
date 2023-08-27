@@ -28,7 +28,7 @@ const QuestionOptionDropdown: React.FC<QuestionOptionDropdownProps> = ({
     <ActiveButton
       flexDirection={'row'}
       flex={1}
-      border={1}
+      borderWidth={1}
       borderColor={colors.bright_gray}
       alignItems={'center'}
       borderRadius={12}

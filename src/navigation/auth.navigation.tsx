@@ -1,9 +1,9 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
 import {INTRO_SCREEN, LOGIN_SCREEN, SIGN_UP_SCREEN} from '@constants/screens';
 import Login from '@features/authentication/login.screen';
 import Intro from '@features/authentication/intro.screen';
 import SignUp from '@features/authentication/sign-up.screen';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   [LOGIN_SCREEN]: undefined;
@@ -11,7 +11,7 @@ export type RootStackParamList = {
   [SIGN_UP_SCREEN]: undefined;
 };
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AuthStack: React.FC = () => {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
 import {
   PRICING_SCREEN,
   QUESTIONS_SCREEN,
@@ -9,6 +8,7 @@ import {
 import Pricing from '@features/plans/pricing.screen';
 import Questions from '@features/plans/questions.screen';
 import Success from '@features/plans/success.screen';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   [PRICING_SCREEN]: undefined;
@@ -16,7 +16,7 @@ export type RootStackParamList = {
   [SUCCESS_SCREEN]: undefined;
 };
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const PlansStack: React.FC = () => {
   return (

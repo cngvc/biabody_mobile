@@ -92,7 +92,7 @@ const Question3 = () => {
         {isOpenHeightPicker ? (
           <Box
             flexDirection={'row'}
-            border={1}
+            borderWidth={1}
             borderColor={colors.bright_gray}
             borderRadius={12}
             mt={4}>
@@ -142,7 +142,7 @@ const Question3 = () => {
         {isOpenWeightPicker ? (
           <Box
             flexDirection={'row'}
-            border={1}
+            borderWidth={1}
             borderColor={colors.bright_gray}
             borderRadius={12}
             mt={4}>

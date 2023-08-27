@@ -19,6 +19,7 @@ import Question6 from '@components/questions/Question6';
 import Question7 from '@components/questions/Question7';
 import {useAppNavigation} from '@hooks/useAppNavigation';
 import {SUCCESS_SCREEN} from '@constants/screens';
+import {useTheme} from 'styled-components';
 
 const sceneKeys = {
   '1': '1',
@@ -42,12 +43,13 @@ const scenes = SceneMap({
 
 const Questions = () => {
   const {t} = useTranslation();
+  const {colors} = useTheme();
   const navigation = useAppNavigation();
   const [tabIndex, setTabIndex] = React.useState(0);
 
   return (
     <SafeArea>
-      <StatusBar barStyle={'dark-content'} />
+      <StatusBar barStyle={'dark-content'} backgroundColor={colors.white} />
       <QuestionProcess
         number={tabIndex + 1}
         onBack={

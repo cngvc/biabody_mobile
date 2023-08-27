@@ -1,13 +1,13 @@
 import styled from 'styled-components/native';
 import {
-  border,
+  borders,
   color,
   layout,
   space,
   grid,
   flexbox,
   position,
-  BorderProps,
+  BordersProps,
   ColorProps,
   SpaceProps,
   LayoutProps,
@@ -17,7 +17,7 @@ import {
 } from 'styled-system';
 
 export interface BoxProps
-  extends BorderProps,
+  extends BordersProps,
     ColorProps,
     SpaceProps,
     GridProps,
@@ -29,7 +29,7 @@ export const Box = styled.View<BoxProps>`
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${grid}
   ${flexbox}
   ${position}
@@ -40,7 +40,7 @@ export const FlexBox = styled.View<BoxProps>`
   ${color}
   ${space}
   ${layout}
-  ${border}
+  ${borders}
   ${grid}
   ${flexbox}
   ${position}
